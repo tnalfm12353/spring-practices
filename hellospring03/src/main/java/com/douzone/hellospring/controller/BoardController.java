@@ -25,6 +25,7 @@ public class BoardController {
 	@ResponseBody
 	@RequestMapping("/board/view/{id}")
 	public String view(@PathVariable("id") Long id) {
+		System.out.println("board/view");
 		return "BoardController:view(" + id + ")";
 	}
 	
