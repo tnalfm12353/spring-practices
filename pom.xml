@@ -48,5 +48,7 @@
 		<module>guestbook03</module>
 		<module>logex</module>
 		<module>aoptest</module>
+		<module>fileupload</module>
+		<module>container</module>
 	</modules>
 </project>
