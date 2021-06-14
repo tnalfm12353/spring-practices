@@ -2,6 +2,9 @@ package com.douzone.container.user;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 
 	private int id = 0;
