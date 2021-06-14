@@ -98,6 +98,27 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 		p:studio="MARVEL"
 		p:actors-ref="actorList" />
 
+	<!-- 11. 생성자를 통한 빈 주입 1 -->
+	<bean id="dvdPlayer1" class="com.douzone.container.videosystem.DVDPlayer">
+		<constructor-arg ref="ironMan" />
+	</bean>
+	
+	<!-- 12. 생성자를 통한 빈 주입 2: c-namespace의 argument name을 사용하는 방법(Spring 3.x 부터 지원.) -->
+	<bean id="dvdPlayer2" class="com.douzone.container.videosystem.DVDPlayer" 
+			c:dvd-ref="ironMan"/>
+		
+	<!-- 13. 생성자를 통한 빈 주입 2: c-namespace의 argument name을 사용하는 방법(Spring 3.x 부터 지원.) -->
+	<bean id="dvdPlayer3" class="com.douzone.container.videosystem.DVDPlayer" 
+			c:_0-ref="ironMan"/>
+			
+	<!-- 14. 프로퍼티를 통한 빈 주입 1 -->
+	<bean id="dvdPlayer4" class="com.douzone.container.videosystem.DVDPlayer">
+		<property name="dvd" ref="avengersInfinityWar" />
+	</bean>
+	
+	<!-- 15. 프로퍼티를 통한 빈 주입 2 -->
+	<bean id="dvdPlayer5" class="com.douzone.container.videosystem.DVDPlayer" 
+		p:dvd-ref="avengersInfinityWar"/>
 	
 	<!-- 08. 빈 설정 - 생성자 wiring collection -->
 	<bean id="avengersTriplePack" class="com.douzone.container.videosystem.DVDPack" >
