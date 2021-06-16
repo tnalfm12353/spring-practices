@@ -18,7 +18,7 @@ public class DVDConfig {
 	@Bean(name="avengersInfinityWar")
 	public DigitalVideoDisc blankDisc() {
 		BlankDisc blankDisc = new BlankDisc();
-		blankDisc.setTitle("Avengers Infinity War");
+		blankDisc.setTitle("Avengers End Game");
 		blankDisc.setStudio("MARVEL");
 		return blankDisc;
 	}
